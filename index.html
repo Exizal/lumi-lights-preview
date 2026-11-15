@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<meta name="theme-color" content="#14104a">
+<title>Lumi Lights</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #14104a; overflow: hidden; touch-action: none;
+    user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+  body { display: flex; align-items: center; justify-content: center; }
+  canvas { display: block; position: fixed; inset: 0; }
+  /* loading screen: studio-logo slot (empty for now) + a quick bar; removed by app.ts when the first screen is ready */
+  #boot { position: fixed; inset: 0; z-index: 5; background: #14104a; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+  #boot .logo-slot { width: 320px; height: 180px; max-width: 86vw; } /* the animated studio logo (src/logo.ts) draws into a canvas here */
+  #boot .bar { width: 200px; height: 8px; border-radius: 4px; background: #ffffff22; overflow: hidden; }
+  #boot .bar i { display: block; width: 40%; height: 100%; border-radius: 4px; background: #7fd8ff; animation: boot 1s ease-in-out infinite alternate; }
+  @keyframes boot { from { margin-left: 0 } to { margin-left: 60% } }
+</style>
+  <script type="module" crossorigin src="./assets/index-Bsxq3qRI.js"></script>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="boot"><div class="logo-slot"></div><div class="bar"><i></i></div></div>
+
+</body>
+</html>
